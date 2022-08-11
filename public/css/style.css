@@ -1,10 +1,11 @@
 * {
+    box-sizing: border-box;
     margin: 0px;
     padding: 0px;
     text-decoration: none;
     list-style: none;
     font-family: "Poppins";
-    font-size: 22px;
+    font-size: 24px;
 }
 
 .container {
@@ -12,7 +13,7 @@
     max-width: 1300px;
     padding-left: 25px;
     padding-right: 25px;
-    }
+}
 
 .header .navbar{
     display: flex;
@@ -34,7 +35,7 @@
 
 .navbar nav ul a {
     color: black;
-    font-size: 14px;
+    font-size: 18px;
 }
 
 .navbar nav ul a:hover {
@@ -45,24 +46,35 @@
 
 .hero{
     border-radius: 8px;
-    background-color: #146356;
+    background-image: linear-gradient( #146356, white);
     color: white;
     padding: 30px;
     display: flex;
     flex-direction: row;
+    flex-wrap:wrap;
     justify-content: space-between;
 }
 
+.hero img{
+    width: 100%;
+}
+
 .hero p{
-    font-size: 14px;
+    font-size: 18px;
     text-align: start;
 }
 
 .btn{
-    padding: 4px;
-    background-color: white;
+    padding: 4px 10px ;
     border-radius: 8px;
-    font-size: 20px;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+}
+
+.btn:hover{
+    border-bottom: 4px solid white;
+    /* background-color: #1a554b; */
 }
 
 footer {
@@ -86,14 +98,33 @@ footer {
 }
 
 .container-card{
-    place-items: center;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 80px;
     width: 100%;
+    justify-content: space-evenly;
+}
+
+.container-card>* {
+    flex: 0 0 160px;
+  }
+
+.container-card a{
+    font-size: 16px;
+    color:black
+}
+
+.container-card p{
+    font-size: 12px;
 }
 
 .card{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 200px;
     background-color: white;
     box-shadow:  6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
   22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
@@ -101,47 +132,10 @@ footer {
 }
 
 .description{
-    padding: 20px;
-}
-
-.description p{
-    margin-top: 20px;
+    padding: 10px 20px 20px 20px;
 }
 
 .card img{
-    width: 70%;
-}
-
-.form-container {
-    /* border: solid red 1px; */
-    background-color: grey;
-}
-
-.form-btn span{
-    /* border: solid red 1px; */
-    font-size: 14px;
-}
-
-#loginForm input{
-    /* border: solid red 1px; */
-    font-size: 14px;
-    display: flex;
-    flex-direction: column;
-}
-
-#regForm input{
-    /* border: solid red 1px; */
-    font-size: 14px;
-    display: flex;
-    flex-direction: column;
-}
-
-#loginForm button{
-    /* border: solid red 1px; */
-    font-size: 14px;
-}
-
-#regForm button{
-    /* border: solid red 1px; */
-    font-size: 14px;
+    width: 100%;
+    overflow: hidden;
 }

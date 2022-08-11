@@ -10,7 +10,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     
         <title>Cele Shop | Web Example</title>
-        <link href="./public/css/style.css" rel="stylesheet">
+        <link href="./public/css/register.css" rel="stylesheet">
 </head>
 <body>
     <div class="header">
@@ -34,31 +34,56 @@
 
     <div class="container">
         <div class="hero">
-        <div class="col-2">
-            <img class="img-hero" src="./public/img/pct.png" alt>
-        </div>
-
-        <div class="col-2">
-            <div class="form-container">
-                <div class="form-btn">
-                    <span>Login</span>
-                    <span>Register</span>
+            <div class="contain-wrap">
+            <div class="wrapper">
+                <div class="form-login">
+                <label>
+                <span>Email</span>
+                    <input class="placeholder"type="email" id="Email" name="email" id="input">
+                </label>
+                <label>
+                    <span>Password</span>
+                        <input class="placeholder" type="password" id="password" name="password" id="input">
+                </label>
+                <button onclick="myFunction()" class="submit" type="login">Login</button>
+        
+            </div>
+        
+            <div class="slide">
+                <div class="img">
+                <div class="img-text m-up">
+                    <h2>New around here?</h2>
+                    <p>Create an account!<br>
+                        Please click on button below to access register section</p>
                 </div>
-                <form id="loginForm">
-                    <input type="email" placeholder="Email@example.com">
-                    <input type="password" placeholder="Password">
-                    <button type="submit" class="submit-btn">Login</button>
-                </form>
-    
-                <form id="regForm">
-                    <input type="text" placeholder="Name">
-                    <input type="email" placeholder="Email@example.com">
-                    <input type="password" placeholder="Password">
-                    <button type="submit" class="register-btn">Register</button>
-                </form>
+                <div class="img-text m-in">
+                    <h2>Have an account?</h2>
+                    <p>Click on button below to access login section!</p>
+                </div>
+                <div class="img-btn">
+                    <span class="m-up">Register</span>
+                    <span class="m-in">Login</span>
+                </div>
+            </div>
+            <div class="form-register">
+                <label>
+                    <span>Name</span>
+                    <input type="text" id="name" class="placeholder" placeholder="e.g Saul Goodman">
+                </label>
+                <label>
+                    <span>E-mail</span>
+                    <input type="email" id="newMail" class="placeholder" placeholder="e.g attorney@law.com">
+                </label>
+                <label>
+                    <span>Password</span>
+                    <input class="placeholder" type="password" id="newPassword" placeholder="insert password...">
+                </label>
+                <button onclick="myFunction()" type="button" class="submit">Register</button>
+            </div>
             </div>
         </div>
-        </div>
+    </div>
+    </div>
     </div>
 
     <div class="footer">
@@ -66,5 +91,7 @@
         &copy; Front-End Web Dev - CAP - Yusuf Habib Fajr
         </footer>
     </div>
+
+    <script src="./script.js"></script>
 </body>
 </html>
