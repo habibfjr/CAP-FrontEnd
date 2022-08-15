@@ -1,30 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../../../assets/css/details.css'
+import './details.css'
 import Header from '../../header'
 import Footer from '../../footer'
 import Drawer from '../../drawer'
 
 const Index = () => {
-    // const menu = document.querySelector("#menu");
-    // const drawerElement = document.querySelector("#drawer");
-    // const close = document.querySelector("#close");
-
-
-    // menu.addEventListener("click", event => {
-    //     drawerElement.classList.toggle("open");
-    //     event.stopPropagation();
-    // });
-
-    // close.addEventListener("click", event => {
-    //     drawerElement.classList.remove("open");
-    //     event.stopPropagation();
-    // })
-    
     return (
         <>
         <Header />
-        <Drawer />
         <div className="container">
             <div className="content">
                 <div className="product-card">

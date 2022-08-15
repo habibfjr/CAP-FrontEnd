@@ -1,42 +1,25 @@
 import React from 'react';
-import '../../../assets/css/auth.css'
+import './auth.css'
 import Header from '../../header'
 import Footer from '../../footer'
 import Drawer from '../../drawer'
 
 const Index = () => {
-    // document.querySelector('.img-btn').addEventListener('click', function()
-    // {
-	// document.querySelector('.wrapper').classList.toggle('s-signup')
-	// });
+    function toggleWrap() {
+        document.querySelector('.wrapper').classList.toggle('s-signup')
+    }
 
-    // function myFunction() {
-    //     document.getElementById("Email").placeholder = "Required";
-    //     document.getElementById("name").placeholder = "Required";
-    //     document.getElementById("password").placeholder = "Required";
-    //     document.getElementById("newMail").placeholder = "Required";
-    //     document.getElementById("newPassword").placeholder = "Required";
-    // };
-
-    // const menu = document.querySelector("#menu");
-    // const drawerElement = document.querySelector("#drawer");
-    // const close = document.querySelector("#close");
-
-
-    // menu.addEventListener("click", event => {
-    //     drawerElement.classList.toggle("open");
-    //     event.stopPropagation();
-    // });
-
-    // close.addEventListener("click", event => {
-    //     drawerElement.classList.remove("open");
-    //     event.stopPropagation();
-    // })
+    function myFunction() {
+        document.getElementById("Email").placeholder = "Required";
+        document.getElementById("name").placeholder = "Required";
+        document.getElementById("password").placeholder = "Required";
+        document.getElementById("newMail").placeholder = "Required";
+        document.getElementById("newPassword").placeholder = "Required";
+    };
 
     return (
         <>
         <Header />
-        <Drawer />
         <div className="container">
         <div className="hero">
             <div className="contain-wrap">
@@ -50,7 +33,7 @@ const Index = () => {
                     <span>Password</span>
                         <input className="placeholder" type="password" id="password" name="password" />
                 </label>
-                <button  className="submit" type="login">Login</button>
+                <button onClick={myFunction} className="submit" type="login">Login</button>
         
             </div>
         
@@ -65,7 +48,7 @@ const Index = () => {
                     <h2>Have an account?</h2>
                     <p>Click on button below to access login section!</p>
                 </div>
-                <div className="img-btn">
+                <div className="img-btn" onClick={toggleWrap}>
                     <span className="m-up">Register</span>
                     <span className="m-in">Login</span>
                 </div>
@@ -83,7 +66,7 @@ const Index = () => {
                     <span>Password</span>
                     <input className="placeholder" type="password" id="newPassword" placeholder="insert password..." />
                 </label>
-                <button  type="button" className="submit">Register</button>
+                <button onClick={myFunction} type="button" className="submit">Register</button>
             </div>
             </div>
         </div>

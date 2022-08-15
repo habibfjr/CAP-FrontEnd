@@ -1,29 +1,13 @@
 import React from 'react';
-import '../../../assets/css/cart.css'
+import './cart.css'
 import Header from '../../header'
 import Footer from '../../footer'
 import Drawer from '../../drawer'
 
-const Index = () => {
-    // const menu = document.querySelector("#menu");
-    // const drawerElement = document.querySelector("#drawer");
-    // const close = document.querySelector("#close");
-
-
-    // menu.addEventListener("click", event => {
-    //     drawerElement.classList.toggle("open");
-    //     event.stopPropagation();
-    // });
-
-    // close.addEventListener("click", event => {
-    //     drawerElement.classList.remove("open");
-    //     event.stopPropagation();
-    // })
-    
+const Index = () => {    
     return (
     <>
     <Header />
-    <Drawer />
         <div className="cart-body">
             <div className="cart-container">
                 <div className="cart-header">

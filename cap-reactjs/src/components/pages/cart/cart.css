@@ -261,7 +261,7 @@ header .navbar{
 }
 
 
-@media only screen and (max-width : 780px) {
+/* @media only screen and (max-width : 780px) {
     header {
         justify-content: space-between;
     }
@@ -288,4 +288,4 @@ header .navbar{
         max-width: 768px;
         margin: 0 auto;
     }
-}
+} */

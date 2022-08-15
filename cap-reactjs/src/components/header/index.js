@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Drawer from '../drawer'
 
-const Index = () => {
+const Index = () => { 
     return (
         <header>
         <div className="container">
@@ -11,7 +12,8 @@ const Index = () => {
                         <b style={{color:"#146356"}}>Cele Shop</b>
                     </Link>
                 </div>
-                <nav>
+                        <Drawer />
+                <nav className="navheader">
                     <ul>
                         <li><Link to="/">Home</Link></li>
                         <li><Link to="/products">Products</Link></li>
@@ -20,7 +22,6 @@ const Index = () => {
                 </nav>
             </div>
         </div>
-        <li><i className="fa-solid fa-bars" id="menu"></i></li>
     </header>
     )
 }
