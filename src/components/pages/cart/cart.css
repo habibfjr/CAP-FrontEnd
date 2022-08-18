@@ -50,6 +50,7 @@ header .navbar{
  display: flex;
  justify-content: center;
  align-items: center;
+ font-size: 18px;
 }
    .cart-container{
     width: 70%;
@@ -57,6 +58,7 @@ header .navbar{
     background-color: #ffffff;
     border-radius: 20px;
     box-shadow: 0px 25px 40px #1687d933;
+    font-size: 18px;
    }
 
    .cart-header{
@@ -66,11 +68,13 @@ header .navbar{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 20px;
    }
    .cart-title{
     font-size: 20px;
     font-weight: 700;
     color: #2F3841;
+    font-size: 20px;
    }
    .action{
     font-size: 14px;
@@ -87,6 +91,7 @@ header .navbar{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 18px;
    }
    .image-box{
     width: 15%;
@@ -98,13 +103,13 @@ header .navbar{
    .title{
     padding-top: 5px;
     line-height: 10px;
-    font-size: 32px;
+    font-size: 22px;
     font-weight: 800;
     color: #202020;
    }
    .subtitle{
     line-height: 10px;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
     color: #909090;
    }
@@ -137,10 +142,11 @@ header .navbar{
    .prices{
     height: 100%;
     text-align: right;
+    font-size: 20px;
    }
    .amount{
     padding-top: 20px;
-    font-size: 26px;
+    font-size: 22px;
     font-weight: 800;
     color: #202020;
    }
@@ -175,7 +181,7 @@ header .navbar{
     justify-content: space-between;
    }
    .Subtotal{
-    font-size: 22px;
+    font-size: 16px;
     font-weight: 700;
     color: #202020;
    }
@@ -186,7 +192,7 @@ header .navbar{
     line-height: 10px;
    }
    .total-amount{
-    font-size: 36px;
+    font-size: 22px;
     font-weight: 900;
     color: #202020;
    }
