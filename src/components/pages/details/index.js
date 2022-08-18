@@ -1,11 +1,23 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './details.css'
 import Header from '../../header'
 import Footer from '../../footer'
-import Drawer from '../../drawer'
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { auth } from '../../../config/firebase';
 
 const Index = () => {
+    const navigate = useNavigate()
+    const [user] = useAuthState(auth)
+    const handleCart = () =>{
+        if (!user){
+            navigate('/auth')
+            alert('You need to login first.')
+        } else{
+            navigate('/cart')
+        }
+    }
+
     return (
         <>
         <Header />
@@ -17,7 +29,9 @@ const Index = () => {
                     <div className="product-pic"></div><br />
                     <div className="product-info">
                         <div className="product-price">$29.99</div>
-                        <Link to="/cart" className="product-button">Add to Cart</Link>
+                        <div className="product-button" 
+                        onClick={handleCart} 
+                        style={{cursor: 'pointer'}}>Add to Cart</div>
                     </div>
                 </div>
         

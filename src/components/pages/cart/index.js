@@ -2,7 +2,6 @@ import React from 'react';
 import './cart.css'
 import Header from '../../header'
 import Footer from '../../footer'
-import Drawer from '../../drawer'
 
 const Index = () => {    
     return (
@@ -17,7 +16,7 @@ const Index = () => {
 
                 <div className="Cart-Items">
                     <div className="image-box">
-                        <img src="https://1.bp.blogspot.com/-c-uA_V7Uj68/X7dh5INmvdI/AAAAAAAAR78/OGCZoV72Z00W7qd3uR5pVys48MYqAeHngCLcBGAsYHQ/s1600/MIcrosoft%2BSurface%2BPro%2B7.jpg" style={{height:"120px"}} />
+                        <img src="https://1.bp.blogspot.com/-c-uA_V7Uj68/X7dh5INmvdI/AAAAAAAAR78/OGCZoV72Z00W7qd3uR5pVys48MYqAeHngCLcBGAsYHQ/s1600/MIcrosoft%2BSurface%2BPro%2B7.jpg" style={{height:"120px"}} alt=''/>
                     </div>
                     <div className="about">
                         <h1 className="title">Lorem ipsum</h1><br />
@@ -37,7 +36,7 @@ const Index = () => {
 
                 <div className="Cart-Items">
                     <div className="image-box">
-                        <img src="https://1.bp.blogspot.com/-c-uA_V7Uj68/X7dh5INmvdI/AAAAAAAAR78/OGCZoV72Z00W7qd3uR5pVys48MYqAeHngCLcBGAsYHQ/s1600/MIcrosoft%2BSurface%2BPro%2B7.jpg" style={{height:"120px"}} />
+                        <img src="https://1.bp.blogspot.com/-c-uA_V7Uj68/X7dh5INmvdI/AAAAAAAAR78/OGCZoV72Z00W7qd3uR5pVys48MYqAeHngCLcBGAsYHQ/s1600/MIcrosoft%2BSurface%2BPro%2B7.jpg" style={{height:"120px"}} alt=''/>
                     </div>
                     <div className="about">
                         <h1 className="title">Lorem ipsum</h1><br />
