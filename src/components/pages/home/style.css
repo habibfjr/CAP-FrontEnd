@@ -46,7 +46,7 @@ header .navbar{
 
 .hero{
     border-radius: 8px;
-    background-image: linear-gradient( #146356, white);
+    background-image: linear-gradient( #146356, #737c7b);
     color: white;
     padding: 30px;
     display: flex;
