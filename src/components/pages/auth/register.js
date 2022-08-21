@@ -7,7 +7,7 @@ import Header from '../../header'
 import Footer from '../../footer'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { Link, useNavigate } from 'react-router-dom';
-import { Button, Form, Input } from 'antd';
+import { Button, Form, Input, message } from 'antd';
 import { LockOutlined, MailOutlined, UserAddOutlined } from '@ant-design/icons';
 
 const Register = () => {
@@ -29,7 +29,9 @@ const Register = () => {
                 inputRegister.email,
                 inputRegister.password
             );
-            alert('User created successfully');
+            setTimeout(()=>{
+                message.success('User created successfully')
+            }, 100)
         }
     }
 

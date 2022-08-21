@@ -5,15 +5,17 @@ import Header from "../../header";
 import Footer from "../../footer";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../../../config/firebase";
-import { Button, Image } from "antd";
+import { Button, Image, message } from "antd";
 
 const Index = () => {
     const navigate = useNavigate();
     const [user] = useAuthState(auth);
     const handleCart = () => {
         if (!user) {
+            setTimeout(()=>{
+                message.error('You need to login first.')
+            }, 100)
             navigate("/auth");
-            alert("You need to login first.");
         } else {
             navigate("/cart");
         }
