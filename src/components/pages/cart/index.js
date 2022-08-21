@@ -2,6 +2,7 @@ import React from "react";
 import "./cart.css";
 import Header from "../../header";
 import Footer from "../../footer";
+import { InputNumber } from "antd";
 
 const Index = () => {
     return (
@@ -24,13 +25,11 @@ const Index = () => {
                         </div>
                         <div className="about">
                             <h1 className="title">Lorem ipsum</h1>
-                            <br />
+                            
                             <h3 className="subtitle">2022</h3>
                         </div>
                         <div className="counter">
-                            <div className="btn">+</div>
-                            <div className="count">1</div>
-                            <div className="btn">-</div>
+                            <InputNumber min={1} defaultValue={1} style={{width: '60px'}}/>
                         </div>
                         <div className="prices">
                             <div className="amount">$29.99</div>
@@ -38,7 +37,7 @@ const Index = () => {
                             <div className="remove">Remove</div>
                         </div>
                     </div>
-
+                    
                     <div className="Cart-Items">
                         <div className="image-box">
                             <img
@@ -49,13 +48,13 @@ const Index = () => {
                         </div>
                         <div className="about">
                             <h1 className="title">Lorem ipsum</h1>
-                            <br />
+                            
                             <h3 className="subtitle">2022</h3>
                         </div>
                         <div className="counter">
-                            <div className="btn">+</div>
-                            <div className="count">1</div>
-                            <div className="btn">-</div>
+                            <InputNumber min={1} defaultValue={1} 
+                            style={{width: '60px'}}
+                            />
                         </div>
                         <div className="prices">
                             <div className="amount">$29.99</div>

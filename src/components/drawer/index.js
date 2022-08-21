@@ -23,17 +23,27 @@ const Index = () => {
                     <li><Link to="/products">Products</Link></li>
                     {
                         user ?
-                            <li>
-                                <div
-                                    onClick={signedOut}
-                                    style={{
-                                        fontSize: '18px',
-                                        cursor: 'pointer',
-                                        marginTop: '6px'
-                                    }}>
-                                    Sign Out
-                                </div>
-                            </li>
+                        (
+                            <>
+                                <li>
+                                    <Link to='/cart'>
+                                        Cart
+                                    </Link>
+                                </li>
+                                <li>
+                                    <div
+                                        onClick={signedOut}
+                                        style={{
+                                            fontSize: '18px',
+                                            cursor: 'pointer',
+                                            color: 'red'
+                                        }}>
+                                        Sign Out
+                                    </div>
+                                </li>
+
+                            </>
+                        )
                             :
                             <li><Link to="/auth">Sign In</Link></li>
                     }

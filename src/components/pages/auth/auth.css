@@ -1,49 +1,3 @@
-*, *:before, *:after{
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
-    text-decoration: none;
-    list-style: none;
-    font-family: "Poppins";
-}
-
-.container {
-    margin: 0 auto;
-    max-width: 1300px;
-    padding-left: 25px;
-    padding-right: 25px;
-}
-
-header .navbar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 0px;
-    position: sticky;
-    width: 100%;
-    top: 0px;
-    font-size: 24px;
-}
-
-.navbar nav ul {
-    display: flex;
-}
-
-.navbar nav ul li {
-    padding: 0px 20px;
-}
-
-.navbar nav ul a {
-    color: black;
-    font-size: 18px;
-}
-
-.navbar nav ul a:hover {
-    border-bottom: 4px solid #203239;
-    border-radius: 4px;
-    padding-bottom: 15px;
-}
-
 #hero-auth{
     border-radius: 8px;
     background-image: linear-gradient( #146356, #737c7b);
@@ -69,17 +23,6 @@ header .navbar{
     /* background-color: #1a554b; */
 }
 
-footer {
-    margin-top: 150px;
-    padding: 20px 0px;
-    font-size: 14px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    background-color: black;
-    color: white;
-}
-
 .contain-wrap{
     width: 100%;
     height: 100vh;
@@ -96,13 +39,9 @@ footer {
   
   .form-login, .form-register{
     position: relative;
-    width: 640px;
+    width: fit-content;
     height: 100%;
     padding: 50px 30px;
-    -webkit-transition:-webkit-transform 1.2s ease-in-out;
-    transition: -webkit-transform 1.2s ease-in-out;
-    transition: transform 1.2s ease-in-out;
-    transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;
   }
   
   h2{
@@ -121,26 +60,12 @@ footer {
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(90deg,rgba(20,99,86,1) 0%,rgb(29, 145, 101) 50%,rgb(27, 109, 88) 100%);
     padding: 4px 12px;
-    width: 100px;
-    font-size: 15px;
+    width: fit-content;
     cursor: pointer;
     border-radius: 30px;
     color: white;
   }
   
-  label{
-    display: block;
-    width: 260px;
-    margin: 25px auto 0;
-    text-align: center;
-  }
-  
-  label span{
-    font-size: 16px;
-    font-weight: 550;
-    color: #000000;
-    text-transform: initial uppercase;
-  }
   
   input{
     display: block;
@@ -165,14 +90,14 @@ footer {
   }
   
   .submit{
-    margin-top: 40px;
     margin-bottom: 30px;
+    margin-left: 18px;
     text-transform: uppercase;
     font-weight: 600;
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(90deg,rgba(20,99,86,1) 0%,rgb(29, 145, 101) 50%,rgb(27, 109, 88) 100%);
-    padding: 4px;
-    width: 100px;
+    padding: 0 14px;
+    width: fit-content;
     font-size: 15px;
     cursor: pointer;
     border-radius: 30px;
@@ -182,67 +107,7 @@ footer {
   .submit:hover{
     background: -webkit-linear-gradient(left, rgb(29, 151, 102), rgb(28, 120, 88));
   }
-  
-  
 
-.slide{
-    overflow: hidden;
-    position: absolute;
-    left: 640px;
-    top: 0;
-    width: 900px;
-    height: 100%;
-    padding-left: 260px;
-    background: #fff;
-    -webkit-transition: -webkit-transform 1.2s ease-in-out;
-    transition: -webkit-transform 1.2s ease-in-out;
-    transition: transform 1.2s ease-in-out;
-  }
-  
-.wrapper.s-signup .slide{
-    -webkit-transform:translate3d(-640px, 0, 0);
-            transform:translate3d(-640px, 0, 0);
-  }
-  
-  .img{
-    overflow: hidden;
-    z-index: 2;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 260px;
-    height: 100%;
-    padding-top: 360px;
-  }
-  
-  .img:before{
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 900px;
-    height: 100%;
-    background-image: url("../../../assets/img/bg.jpg");
-    background-size: cover;
-    transition: -webkit-transform 1.2s ease-in-out;
-    transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;
-  }
-  
-  .img:after{
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.3);
-  }
-  
-  .wrapper.s-signup .img:before{
-    -webkit-transform:translate3d(640px, 0, 0);
-            transform:translate3d(640px, 0, 0);
-  }
-  
   .img-text{
     z-index: 2;
     position: absolute;
@@ -266,22 +131,6 @@ footer {
     font-size: 14px;
     line-height: 1.5;
   }
-  
-  .wrapper.s-signup .img-text.m-up{
-    -webkit-transform:translateX(520px);
-            transform:translateX(520px);
-  }
-  
-  .img-text.m-in{
-    -webkit-transform:translateX(-520px);
-            transform:translateX(-520px);
-  }
-  
-  .wrapper.s-signup .img-text.m-in{
-    -webkit-transform:translateX(0);
-            transform:translateX(0);
-  }
-  
   
   .login{
     padding-top: 65px;
@@ -342,121 +191,8 @@ footer {
     transition: transform 1.2s, -webkit-transform 1.2s;;
     font-size: 16px;
   }
-  
-  .img-btn span.m-in{
-    -webkit-transform:translateY(-72px);
-            transform:translateY(-72px);
-  }
-  
-  .wrapper.s-signup .img-btn span.m-in{
-    -webkit-transform:translateY(0);
-            transform:translateY(0);
-  }
-  
-  .wrapper.s-signup .img-btn span.m-up{
-    -webkit-transform:translateY(72px);
-            transform:translateY(72px);
-  }
-  
-  .sign-up{
-    -webkit-transform:translate3d(-900px, 0, 0);
-            transform:translate3d(-900px, 0, 0);
-  }
-  
-  .wrapper.s-signup .sign-up{
-    -webkit-transform:translate3d(0, 0, 0);
-            transform:translate3d(0, 0, 0);
-  }
-
 
   .placeholder{
     font-size: 14px;
     font-weight:300;
     }
-
-    #drawer {
-        color: white;
-        background-color: #203239;
-        width: 100%;
-        height: 100%;
-        position: fixed;
-        top: 0px;
-        /* border: 1px solid red; */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: 0.3s ease;
-        transform: translate(-13000px);
-    }
-    
-    #drawer a {
-        color: white;
-    }
-    
-    #drawer nav ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    #drawer ul li {
-        padding: 20px;
-    }
-    
-    #drawer #close {
-        display: unset;
-        position: absolute;
-        top: 20px;
-        right: 30px;
-        font-size: 20px;
-    }
-    
-    #menu {
-        padding-right: 20px;
-        display: none;
-    }
-    
-    #drawer.open {
-        transform: translate(0, 0);
-    }
-    
-    
-    /* @media only screen and (max-width : 780px) {
-        header {
-            justify-content: space-between;
-        }
-        #menu {
-            display: block;
-        }
-    
-        header {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-    
-        header .navbar {
-            justify-content: left;
-        }
-    
-        header nav {
-            display: none;
-        }
-        
-        .container{
-            min-width: 480px;
-            max-width: 768px;
-            margin: 0 auto;
-        }
-
-        .wrapper{
-            overflow: hidden;
-            position: relative;
-            width: 780px;
-            height: 550px;
-            background: #fff;
-            box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
-            border-radius: 1rem;
-        
-        }
-    } */

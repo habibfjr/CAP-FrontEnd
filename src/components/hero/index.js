@@ -7,7 +7,7 @@ const Index = () => {
         <div className="container">
             <div className="hero">
                 <div className="col">
-                    <h1><br />Find Your
+                    <h1 style={{color: 'white', fontWeight: 'bold'}}><br />Find Your
                         Best Support</h1> <br />
                     <p>Better support, better result.<br />
                         Start your journey here.</p> <br />
