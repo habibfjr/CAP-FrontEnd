@@ -1,29 +1,32 @@
 import React, { useEffect, useState } from 'react';
 import {
-    auth, 
-    logInWithEmailAndPassword}
+    auth,
+    logInWithEmailAndPassword
+}
     from '../../../config/firebase'
 import { useAuthState } from 'react-firebase-hooks/auth'
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Header from '../../header'
 import Footer from '../../footer'
+import { Button, Form, Input } from 'antd';
+import { LockOutlined, MailOutlined } from '@ant-design/icons';
 
-const Login =()=>{
+const Login = () => {
     const [user, loading, error] = useAuthState(auth)
 
     const navigate = useNavigate()
-    
+
     const [inputLogin, setInputLogin] = useState({
         email: '',
         password: ''
     })
 
-    const handleSubmit =  async (e, params) => {
+    const handleSubmit = async (e, params) => {
         e.preventDefault()
-        if (params=== 'login'){
+        if (params === 'login') {
             await logInWithEmailAndPassword(inputLogin.email, inputLogin.password);
         }
-        
+
     }
 
     useEffect(() => {
@@ -32,36 +35,60 @@ const Login =()=>{
         }
         if (user) navigate('/');
         if (error) alert(error);
-        }, [loading, user, error, navigate]);
+    }, [loading, user, error, navigate]);
 
-    return(
+    return (
         <>
-        <Header />
-        <form className="form-login">
-                <label>
-                <span>Email</span>
-                    <input className="placeholder"
-                    type="email"
-                    id="Email"
-                    name="email"
-                    value={inputLogin.email}
-                    onChange={(e)=> setInputLogin({...inputLogin, email:e.target.value})}
+            <Header />
+            <Form name="login" 
+            className="form-login"
+            style={{margin: '0 auto'}}
+            >
+                <Form.Item name='email'
+                    rules={[
+                        {
+                            required: true,
+                            message: 'Please input your Email!',
+                        },
+                    ]}>
+                    <Input 
+                        className="placeholder"
+                        prefix={<MailOutlined className="site-form-item-icon" />}
+                        type="email"
+                        placeholder="Email"
+                        value={inputLogin.email}
+                        onChange={(e) => setInputLogin({ ...inputLogin, email: e.target.value })}
                     />
-                </label>
-                <label>
-                    <span>Password</span>
-                        <input className="placeholder" type="password" id="password" name="password" 
+                </Form.Item>
+
+                <Form.Item name='password'
+                    rules={[
+                        {
+                            required: true,
+                            message: 'Please input your Password!',
+                        },
+                    ]}>
+                    <Input
+                        className="placeholder"
+                        prefix={<LockOutlined className="site-form-item-icon" />}
+                        type="password"
+                        placeholder="Password"
                         value={inputLogin.password}
-                        onChange={(e)=> setInputLogin({...inputLogin, password:e.target.value})}
-                        />
-                </label>
-                <button
-                className="submit"
-                type="login"
-                onClick={e=> handleSubmit(e,'login')}
-                >Login</button>
-        
-            </form>
+                        onChange={(e) => setInputLogin({ ...inputLogin, password: e.target.value })}
+                    />
+                </Form.Item>
+
+                <Form.Item>
+                    <Button
+                        type="primary"
+                        htmlType="submit"
+                        className="submit"
+                        onClick={e => handleSubmit(e, 'login')}>
+                        Login
+                    </Button>
+                    <br/> Don't have an account? <Link to="/auth/register" style={{color:'cornflowerblue'}}>register now!</Link>
+                </Form.Item>
+            </Form>
             <Footer />
         </>
     )

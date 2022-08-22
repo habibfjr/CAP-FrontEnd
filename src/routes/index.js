@@ -8,20 +8,20 @@ import Details from '../components/pages/details'
 import Login from '../components/pages/auth/login';
 import Register from '../components/pages/auth/register';
 
-const Index = () =>{
-    return(
+const Index = () => {
+    return (
         <>
-        <BrowserRouter>
-            <Routes>
-            <Route exact path = "/" element={<Home />} />
-            <Route exact path = "/products" element={<Product />} />
-            <Route exact path = "/products/:productId" element={<Details />} />
-            <Route exact path = "/auth" element={<Auth />} />
-            <Route exact path = "/auth/login" element={<Login />} />
-            <Route exact path = "/auth/register" element={<Register />} />
-            <Route exact path = "/cart" element={<Cart />} />
-            </Routes>
-        </BrowserRouter>
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/products" element={<Product />} />
+                    <Route path="/products/:productId" element={<Details />} />
+                    <Route path="/auth" element={<Auth />} />
+                    <Route path="/auth/login" element={<Login />} />
+                    <Route path="/auth/register" element={<Register />} />
+                    <Route path="/cart" element={<Cart />} />
+                </Routes>
+            </BrowserRouter>
         </>
     )
 }
