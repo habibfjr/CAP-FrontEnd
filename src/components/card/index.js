@@ -23,7 +23,8 @@ const Index = () => {
                     <img
                         loading='lazy'
                         src={result.thumbnail}
-                        alt="" />
+                        alt="" 
+                        />
                     <div className="description">
                         <h4>{result.name}</h4>
                         <p>${result.price}</p>
