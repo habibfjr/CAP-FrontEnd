@@ -13,7 +13,7 @@ const Index = () => {
             </div>
             <div className="container-card">
                 <Card />
-                <Card />
+                {/* <Card />
                 <Card />
                 <Card />
                 <Card />
@@ -62,7 +62,7 @@ const Index = () => {
                         <h2><a href="details.html">Lorem ipsum</a></h2>
                         <p>$79.99</p>
                     </div>
-                </div>
+                </div> */}
             </div>
             <Footer />
         </>

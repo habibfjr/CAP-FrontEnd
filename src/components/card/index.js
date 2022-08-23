@@ -1,19 +1,36 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useProducts } from '../../hooks/useProducts';
 
 const Index = () => {
-    return (
+    const [isLoading, data, getAll] = useProducts()
+
+    useEffect(()=>{
+        if (data.length < 1) {
+            getAll();
+        }
+    }, [data.length, getAll])
+
+    return isLoading ? (
+        <div style={{ height: '100vh', textAlign: 'center' }}>
+            Loading Product...
+        </div>
+    ) : (
         <>
-            <div className="card">
-                <Link to="/products/:productId">
+                {data.map(result => (
+            <div className="card" key={result.id}>
+                <Link to={`/products/${result.id}`}>
                     <img
-                        src="https://1.bp.blogspot.com/-c-uA_V7Uj68/X7dh5INmvdI/AAAAAAAAR78/OGCZoV72Z00W7qd3uR5pVys48MYqAeHngCLcBGAsYHQ/s1600/MIcrosoft%2BSurface%2BPro%2B7.jpg" alt="" />
+                        loading='lazy'
+                        src={result.thumbnail}
+                        alt="" />
                     <div className="description">
-                        <h4>Lorem ipsum</h4>
-                        <p>$29.99</p>
+                        <h4>{result.name}</h4>
+                        <p>${result.price}</p>
                     </div>
                 </Link>
             </div>
+                ))}
         </>
     )
 }

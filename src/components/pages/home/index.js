@@ -18,11 +18,11 @@ const Home = () => {
 
             <div className="container-card">
                 <Card />
+                {/* <Card />
                 <Card />
                 <Card />
-                <Card />
-                <Card />
-                <div className="card">
+                <Card /> */}
+                {/* <div className="card">
                     <img
                         src="https://toppng.com/uploads/preview/iphone-icon-png-mobile-clip-art-smart-phone-11563653635uruiaxvz05.png" alt="" />
                     <div className="description">
@@ -66,7 +66,7 @@ const Home = () => {
                         <h2><Link to="/products/:productId">Lorem ipsum</Link></h2>
                         <p>$79.99</p>
                     </div>
-                </div>
+                </div> */}
             </div>
             <Footer />
         </>
