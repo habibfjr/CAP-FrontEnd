@@ -8,7 +8,7 @@ import { useAuthState } from 'react-firebase-hooks/auth'
 import { Link, useNavigate } from 'react-router-dom';
 import Header from '../../header'
 import Footer from '../../footer'
-import { Button, Form, Input } from 'antd';
+import { Button, Form, Input, message } from 'antd';
 import { LockOutlined, MailOutlined } from '@ant-design/icons';
 
 const Login = () => {
@@ -26,14 +26,18 @@ const Login = () => {
         if (params === 'login') {
             await logInWithEmailAndPassword(inputLogin.email, inputLogin.password);
         }
-
     }
 
     useEffect(() => {
         if (loading) {
             return;
         }
-        if (user) navigate('/');
+        if (user) {
+            setTimeout(()=>{
+                message.success('You are logged in!', 3)
+            }, 100)
+            navigate('/');
+        } 
         if (error) alert(error);
     }, [loading, user, error, navigate]);
 
@@ -42,7 +46,7 @@ const Login = () => {
             <Header />
             <Form name="login" 
             className="form-login"
-            style={{margin: '0 auto'}}
+            style={{margin: '128px auto'}}
             >
                 <Form.Item name='email'
                     rules={[
@@ -89,6 +93,7 @@ const Login = () => {
                     <br/> Don't have an account? <Link to="/auth/register" style={{color:'cornflowerblue'}}>register now!</Link>
                 </Form.Item>
             </Form>
+            <div style={{height: '40px'}} />
             <Footer />
         </>
     )

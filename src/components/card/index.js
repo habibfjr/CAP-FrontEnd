@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { images } from '../../assets';
 import { useProducts } from '../../hooks/useProducts';
 
 const Index = () => {
@@ -9,10 +10,11 @@ const Index = () => {
         if (data.length < 1) {
             getAll();
         }
-    }, [data.length, getAll])
+    }, [])
 
     return isLoading ? (
         <div style={{ height: '100vh', textAlign: 'center' }}>
+            <img src={images['loading.gif']} alt='' />
             Loading Product...
         </div>
     ) : (
@@ -20,11 +22,13 @@ const Index = () => {
                 {data.map(result => (
             <div className="card" key={result.id}>
                 <Link to={`/products/${result.id}`}>
+                    <div id='img-container' style={{height: '240px'}}>
                     <img
                         loading='lazy'
-                        src={result.thumbnail}
-                        alt="" 
+                        src={images[result.thumbnail]}
+                        alt=""
                         />
+                    </div>
                     <div className="description">
                         <h4>{result.name}</h4>
                         <p>${result.price}</p>

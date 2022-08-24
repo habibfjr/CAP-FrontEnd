@@ -102,12 +102,9 @@ h2{
 }
 
 footer {
-    margin-top: 150px;
+    margin-top: auto;
     padding: 20px 0px;
     font-size: 14px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
     background-color: black;
     color: white;
 }
@@ -133,7 +130,7 @@ footer {
 }
 
 .container-card>* {
-    flex: 0 0 160px;
+    flex: 0 0 240px;
   }
 
 .container-card a{
@@ -149,7 +146,7 @@ footer {
     display:flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 250px;
+    height: fit-content;
     background-color: white;
     border-radius: 8px;
     box-shadow:  6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
@@ -163,6 +160,7 @@ footer {
 
 .card img{
     width: 100%;
+    height: 100%;
     overflow: hidden;
 }
 .menu-container {
@@ -211,42 +209,19 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding: 4px 6px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
     border: none;
     vertical-align: middle;
     transition: box-shadow 0.4s ease;
     padding-right: 20px;
     display:none;
   }
-  
-  .menu-trigger:hover {
-    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+
+  .menu-trigger:hover{
+    scale: 1.06;
   }
   
-  .menu-trigger span {
-    font-weight: 700;
-    vertical-align: middle;
-    font-size: 14px;
-    margin: 0 10px;
-  }
 
   @media only screen and (max-width: 780px){
-    /* header {
-        justify-content: space-between;
-    }
-
-    header {
-        display: flex;
-        justify-content: center;
-    }
-
-    header .navbar {
-        justify-content: left;
-    }
-
-    header nav {
-        display: none;
-    } */
     .navheader{
         display:none;
     }
@@ -297,105 +272,8 @@ footer {
         justify-content: space-between;
         align-items: center;
         padding: 4px 6px;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
         border: none;
         vertical-align: middle;
         transition: box-shadow 0.4s ease;
       }
-      
-      .menu-trigger:hover {
-        box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
-      }
-      
-      .menu-trigger span {
-        font-weight: 700;
-        vertical-align: middle;
-        font-size: 14px;
-        margin: 0 10px;
-      } 
   }
-
-/* @media only screen and (max-width : 780px) {
-    header {
-        justify-content: space-between;
-    }
-
-    header {
-        display: flex;
-        justify-content: center;
-    }
-
-    header .navbar {
-        justify-content: left;
-    }
-
-    header nav {
-        display: none;
-    }
-    
-    .container{
-        max-width: 780px;
-        margin: 0 auto;
-    }
-
-    nav .menu {
-        background: #ffffff;
-        border-radius: 8px;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 120px;
-        box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
-        opacity: 0;
-        visibility: hidden;
-        transform: translateY(-20px);
-        transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
-      }
-      
-      nav .menu.open {
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0);
-      }
-      
-      nav .menu ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-      }
-      
-      nav .menu li Link {
-        text-decoration: none;
-        color: #333333;
-        padding: 15px 20px;
-      }
-    
-      .menu-trigger {
-        background: #ffffff;
-        border-radius: 90px;
-        cursor: pointer;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 4px 6px;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-        border: none;
-        vertical-align: middle;
-        transition: box-shadow 0.4s ease;
-        padding-right: 20px;
-        display:none;
-      }
-      
-      .menu-trigger:hover {
-        box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
-      }
-      
-      .menu-trigger span {
-        font-weight: 700;
-        vertical-align: middle;
-        font-size: 14px;
-        margin: 0 10px;
-      }
-} */

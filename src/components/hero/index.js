@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import hero from '../../assets/img/pct.png'
+import { images } from '../../assets';
 
 const Index = () => {
     return (
@@ -15,7 +15,7 @@ const Index = () => {
                 </div>
 
                 <div className="col-2">
-                    <img alt="" className="img-hero" src={hero} />
+                    <img alt="" className="img-hero" src={images['pct.png']} />
                 </div>
             </div>
         </div>

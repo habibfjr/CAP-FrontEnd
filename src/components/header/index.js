@@ -3,13 +3,15 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import { auth, logout } from '../../config/firebase';
 import Drawer from '../drawer'
-import cart from '../../assets/img/cart.png'
+import { images } from '../../assets';
+import { message } from 'antd';
 
 const Index = () => {
     const [user] = useAuthState(auth)
     const navigate = useNavigate()
     const signedOut = () => {
         logout()
+        message.warn('You are logged out',5)
         navigate('/')
     }
 
@@ -34,7 +36,7 @@ const Index = () => {
                                         <>
                                             <li>
                                                 <Link to='/cart'>
-                                                    <img src={cart} alt='' style={{ width: 30, height: 30}} />
+                                                    <img src={images['cart.png']} alt='' style={{ width: 30, height: 30}} />
                                                 </Link>
                                             </li>
                                             <li>

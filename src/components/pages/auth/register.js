@@ -30,7 +30,7 @@ const Register = () => {
                 inputRegister.password
             );
             setTimeout(()=>{
-                message.success('User created successfully')
+                message.success('User successfully created!', 3)
             }, 100)
         }
     }
@@ -48,7 +48,7 @@ const Register = () => {
             <Header />
             <Form name='register'
             className='form-register'
-            style={{margin: '0 auto'}}>
+            style={{margin: '128px auto'}}>
                 <Form.Item name='name'
                     rules={[
                         {
@@ -112,6 +112,7 @@ const Register = () => {
                     <Link to="/auth/login" style={{color:'cornflowerblue'}}> click here!</Link>
                 </Form.Item>
             </Form>
+            <div style={{height: '40px'}} />
             <Footer />
         </>
     )

@@ -1,3 +1,4 @@
+import { MenuOutlined } from '@ant-design/icons';
 import React, { useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
@@ -14,9 +15,7 @@ const Index = () => {
 
     return (
         <div className="menu-container">
-            <button onClick={() => setIsOpen(!isOpen)} className="menu-trigger">
-                <span>Menu</span>
-            </button>
+                <MenuOutlined onClick={() => setIsOpen(!isOpen)} className="menu-trigger"/>
             <nav className={`menu ${isOpen ? 'open' : 'closed'}`}>
                 <ul>
                     <li><Link to="/">Home</Link></li>
