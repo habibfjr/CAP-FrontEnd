@@ -7,6 +7,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../../../config/firebase";
 import { Button, Image, message } from "antd";
 import { useProductDetail } from "../../../hooks/useProducts";
+import { images } from "../../../assets";
 
 const Index = () => {
     const {productId} = useParams();
@@ -16,7 +17,7 @@ const Index = () => {
     const handleCart = () => {
         if (!user) {
             setTimeout(()=>{
-                message.error('You need to login first.')
+                message.error('You need to login first', 5)
             }, 100)
             navigate("/auth");
         } else {
@@ -28,10 +29,11 @@ const Index = () => {
         if (data.length < 1) {
             getDetail(productId)
         }
-    })
+    }, [])
 
     return isLoading ? (
-        <div style={{ height: '100vh', textAlign: 'center' }}>
+        <div style={{ height: '100vh', textAlign: 'center', margin: '144px auto' }}>
+            <img src={images['loading.gif']} alt='' /><br/>
             Loading Product...
         </div>
     ) : (
@@ -43,7 +45,7 @@ const Index = () => {
                         <h1>{data.name}</h1>
                         {/* <h4>Short Description</h4>  */}
                         <br />
-                        <Image src={data.thumbnail}
+                        <Image src={images[data.thumbnail]}
                         // "https://1.bp.blogspot.com/-c-uA_V7Uj68/X7dh5INmvdI/AAAAAAAAR78/OGCZoV72Z00W7qd3uR5pVys48MYqAeHngCLcBGAsYHQ/s1600/MIcrosoft%2BSurface%2BPro%2B7.jpg"
                         style={{width: "100%", height: '250px', marginBottom: '30px'}}
                         />
@@ -77,6 +79,7 @@ const Index = () => {
                     </div>
                 </div>
             </div>
+            <div style={{height: '240px'}} />
             <Footer />
         </>
     );

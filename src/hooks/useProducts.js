@@ -1,4 +1,4 @@
-import { message } from 'antd'
+// import { message } from 'antd'
 import { useState } from 'react'
 import api from '../api'
 
@@ -12,7 +12,7 @@ export const useProducts = () => {
             const result = await api.getAll()
             setData(result.data)
         } catch (err) {
-            message.error(err)
+            console.log(err)
         } finally {
             setIsLoading(false)
         }
@@ -31,7 +31,7 @@ export const useProductDetail = () => {
             const result = await api.getById(id)
             setData(result.data)
         } catch (err) {
-            message.error(err)
+            console.log(err)
         } finally {
             setIsLoading(false)
         }
