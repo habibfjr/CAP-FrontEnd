@@ -7,7 +7,7 @@ import Cart from '../components/pages/cart'
 import Details from '../components/pages/details'
 import Login from '../components/pages/auth/login';
 import Register from '../components/pages/auth/register';
-import { message } from 'antd';
+import NotFound from '../components/pages/not-found';
 
 const Index = () => {
     return (
@@ -21,7 +21,7 @@ const Index = () => {
                     <Route path="/auth/login" element={<Login />} />
                     <Route path="/auth/register" element={<Register />} />
                     <Route path="/cart" element={<Cart />} />
-                    <Route path="*" element={message.error('404 Not Found')} />
+                    <Route path="*" element={<NotFound /> } />
                 </Routes>
             </BrowserRouter>
         </>

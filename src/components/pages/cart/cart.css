@@ -4,7 +4,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* font-size: 18px; */
 }
 
 .cart-container{
@@ -26,6 +25,7 @@
     justify-content: space-between;
     align-items: center;
     font-size: 20px;
+    gap: 50px;
 }
 .cart-title{
     font-size: 20px;
