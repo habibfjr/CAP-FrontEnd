@@ -8,7 +8,7 @@ const Index = () => {
 
     useEffect(()=>{
         if (data.length < 1) {
-            getAll();
+            getAll(1, 4);
         }
     }, [])
 
